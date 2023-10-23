@@ -7,9 +7,9 @@ import background from "../assets/background.jpg";
 import { fonts } from "./typography";
 
 export const global = css`
-  /* * {
+  * {
     border: 1px solid green;
-  } */
+  }
 
   @font-face {
     font-family: "Hansip";
@@ -30,6 +30,7 @@ export const global = css`
     color: ${colors.gray.dark};
     background-image: url(${background});
     background-size: 100% 100%;
+    color: white;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
