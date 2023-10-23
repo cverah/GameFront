@@ -1,49 +1,6 @@
-import styled from "@emotion/styled";
-import ImgHeader from "../../assets/header_bg.png";
-import HeaderMenu from "../../assets/header_menu.png";
 import IconMenu from "../../assets/icon_menu.png";
 import IconMenu2 from "../../assets/icon_menu2.png";
-
-const ContainerHeader = styled.header`
-  width: 100%;
-  height: 130px;
-  background-image: url(${ImgHeader});
-  background-size: 100% 100%; // Ajusta el tamaño de la imagen al contenedor
-  background-repeat: no-repeat;
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  padding: 0 30px;
-`;
-
-const ContainerMenu = styled.nav`
-  display: flex;
-  gap: 10px;
-`;
-
-const ItemMenu = styled.div`
-  cursor: pointer;
-  width: fit-content;
-  height: 80px;
-  background-image: url(${HeaderMenu});
-  background-size: 100% 100%; // Ajusta el tamaño de la imagen al contenedor
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-`;
-
-const Img = styled.img`
-  cursor: pointer;
-  width: 80px;
-  height: 80px;
-  margin-top: 18px;
-`;
-const P = styled.p`
-  font-size: 24px;
-  -webkit-text-stroke: 1px black; /* pintar borde */
-  padding-right: 40px;
-`;
+import { ContainerHeader, ContainerMenu, Img, ItemMenu, P } from "./header";
 
 const Header = () => {
   return (
