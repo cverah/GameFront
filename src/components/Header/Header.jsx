@@ -21,11 +21,6 @@ const ContainerMenu = styled.nav`
   gap: 10px;
 `;
 
-const ContainerOptions = styled.div`
-  display: flex;
-  gap: 10px;
-`;
-
 const ItemMenu = styled.div`
   cursor: pointer;
   width: fit-content;
@@ -37,8 +32,6 @@ const ItemMenu = styled.div`
   align-items: center;
   /* justify-content: center; */
 `;
-
-const Content = styled.div``;
 
 const Img = styled.img`
   cursor: pointer;
