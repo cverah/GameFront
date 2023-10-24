@@ -5,7 +5,6 @@ import Garden04 from "../../assets/garden04.jpg";
 import Garden05 from "../../assets/garden05.jpg";
 import CardButton from "../../assets/card_button.png";
 import { fonts } from "../../styles/typography";
-import PropTypes from "prop-types"; // ES6
 
 const ScrollWindow = styled.div`
   max-width: 85%;
@@ -89,96 +88,38 @@ const ItemEnter = styled.div`
 `;
 
 const ScrollCard = () => {
+  const images = [
+    Garden01,
+    Garden02,
+    Garden04,
+    Garden05,
+    Garden01,
+    Garden02,
+    Garden04,
+  ];
+
+  const colors = ["red", "yellow", "green", "blue", "orange", "black", "cyan"];
+  const cardArray = Array.from({ length: 20 }, (_, index) => index);
+
   return (
     <ScrollWindow>
       <Grid>
-        <Card>
-          <Image src={Garden01} alt="image" />
-          <Title>Garden 01</Title>
-          <Circle circleColor="red" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden02} alt="image" />
-          <Title>Garden 02</Title>
-          <Circle circleColor="blue" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden04} alt="image" />
-          <Title>Garden 03</Title>
-          <Circle circleColor="green" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden04} alt="image" />
-          <Title>Garden 04</Title>
-          <Circle circleColor="red" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden05} alt="image" />
-          <Title>Garden 05</Title>
-          <Circle circleColor="orange" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden01} alt="image" />
-          <Title>Garden 06</Title>
-          <Circle circleColor="red" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden02} alt="image" />
-          <Title>Garden 07</Title>
-          <Circle circleColor="blue" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden04} alt="image" />
-          <Title>Garden 08</Title>
-          <Circle circleColor="green" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden04} alt="image" />
-          <Title>Garden 09</Title>
-          <Circle circleColor="red" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
-        <Card>
-          <Image src={Garden05} alt="image" />
-          <Title>Garden 10</Title>
-          <Circle circleColor="orange" />
-          <ItemEnter>
-            <p style={{ fontSize: "25px" }}>ENTER</p>
-          </ItemEnter>
-        </Card>
+        {cardArray.map((element) => {
+          const randomIndex = Math.floor(Math.random() * images.length);
+          return (
+            <Card key={element}>
+              <Image src={images[randomIndex]} alt="image" />
+              <Title>Garden {element + 1}</Title>
+              <Circle circleColor={colors[randomIndex]} />
+              <ItemEnter>
+                <p style={{ fontSize: "25px" }}>ENTER</p>
+              </ItemEnter>
+            </Card>
+          );
+        })}
       </Grid>
     </ScrollWindow>
   );
-};
-
-ScrollCard.propTypes = {
-  circleColor: PropTypes.string,
 };
 
 export default ScrollCard;
