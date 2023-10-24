@@ -1,7 +1,7 @@
 export const fonts = {
-  primary: `"Hansip", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  primary: `"SCRUBLAND", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
-  secondary: `"SCRUBLAND", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  secondary: `"Hansip", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
 };
 
@@ -64,7 +64,7 @@ for (const size in typography.text) {
 
 for (const size in typography.head) {
   typography.head[size] += `
-  font-family: ${fonts.secondary};
+  font-family: ${fonts.primary};
   font-weight: 600;
   `;
 }
