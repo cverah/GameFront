@@ -7,9 +7,9 @@ import background from "../assets/background.jpg";
 import { fonts } from "./typography";
 
 export const global = css`
-  * {
+  /* * {
     border: 1px solid green;
-  }
+  } */
 
   @font-face {
     font-family: "Hansip";
