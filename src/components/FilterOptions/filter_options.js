@@ -8,6 +8,7 @@ export const ContainerOptions = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 18px;
+  margin-bottom: 8px;
 `;
 
 export const ItemOptionsRight = styled.div`
