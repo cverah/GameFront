@@ -26,7 +26,7 @@ export const global = css`
   body {
     font-size: 1rem;
     line-height: 1.5rem;
-    font-family: ${fonts.secondary};
+    font-family: ${fonts.primary};
     color: ${colors.gray.dark};
     background-image: url(${background});
     background-size: 100% 100%;
